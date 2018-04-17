@@ -228,7 +228,7 @@ public class Property<T> {
     /// `Property` を初期値を与えて初期化する.
     ///
     /// - Parameter value: 初期値.
-    init(_ value: T) {
+    public init(_ value: T) {
         self.value = value
     }
 
@@ -258,18 +258,18 @@ public class Property<T> {
     ///   - retainer: 購読の生存期間を決定するオブジェクト. `Observable` は `retainer` への弱参照を保持し, `retainer` もしくは `Observable` が開放されたときに購読を解除する. `nil` のとき生存期間は `Observable` と同じ.
     ///   - queue: コールバック関数の実行される `DispatchQueue`. `nil` のとき関数はイベント発生源のスレッドで同期的に実行される.
     ///   - build: `Observable` に対する処理グラフを構築するためのコールバック関数.
-    /// - Returns: 購読をキャンセルするための `Subscription` オブジェクト. `Subscription` の `deinit` 時には何も起こらないため, 手動で生存期間の管理を行わない場合は `Subscription` を保存する必要はない.
+    /// - Returns: `build` の実行結果
     @discardableResult
-    open func observe(retainer object: AnyObject? = nil,
-                      on queue: DispatchQueue? = nil,
-                      _ build: (Observable<T>) -> Void) -> Observable<T>.Subscription {
+    open func observe<Result>(retainer object: AnyObject? = nil,
+                              on queue: DispatchQueue? = nil,
+                              _ build: (Observable<T>) -> Result) -> Result {
         let obs = Observable<T>()
-        build(obs)
-        let subscription = observable.subscribe(retainer: object, on: queue) { value in
+        let result = build(obs)
+        observable.subscribe(retainer: object, on: queue) { value in
             obs.emit(value)
         }
         obs.emit(value)
-        return subscription
+        return result
     }
 
     /// `unsubscribe(subscription:)` は `Subscription` で表現される購読を解除する.
