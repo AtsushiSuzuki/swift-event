@@ -1,8 +1,8 @@
 //: A UIKit based Playground for presenting user interface
-  
+
 import UIKit
 import PlaygroundSupport
-import swift_event
+import Observable
 
 class MyViewModel {
     let count: Property<Int>
@@ -34,7 +34,7 @@ class MyViewController : UIViewController {
     let viewModel = MyViewModel(0)
     var countLabel: UILabel!
     var incrementButton: UIButton!
-    
+
     override func loadView() {
         let view = UIView()
         view.backgroundColor = .white

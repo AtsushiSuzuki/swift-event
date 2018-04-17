@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "swift-event::swift-event"
-               BuildableName = "swift_event.framework"
-               BlueprintName = "swift-event"
-               ReferencedContainer = "container:swift-event.xcodeproj">
+               BlueprintIdentifier = "Observable::Observable"
+               BuildableName = "Observable.framework"
+               BlueprintName = "Observable"
+               ReferencedContainer = "container:Observable.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "swift-event::swift-eventTests"
-               BuildableName = "swift-eventTests.xctest"
-               BlueprintName = "swift-eventTests"
-               ReferencedContainer = "container:swift-event.xcodeproj">
+               BlueprintIdentifier = "Observable::ObservableTests"
+               BuildableName = "ObservableTests.xctest"
+               BlueprintName = "ObservableTests"
+               ReferencedContainer = "container:Observable.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,10 +55,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "swift-event::swift-event"
-            BuildableName = "swift_event.framework"
-            BlueprintName = "swift-event"
-            ReferencedContainer = "container:swift-event.xcodeproj">
+            BlueprintIdentifier = "Observable::Observable"
+            BuildableName = "Observable.framework"
+            BlueprintName = "Observable"
+            ReferencedContainer = "container:Observable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>

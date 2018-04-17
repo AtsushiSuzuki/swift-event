@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "container:swift-event.xcodeproj">
+      location = "container:Observable.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Playground.playground">

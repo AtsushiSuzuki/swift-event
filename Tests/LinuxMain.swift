@@ -1,7 +1,7 @@
 import XCTest
 
-import swift_eventTests
+import ObservableTests
 
 var tests = [XCTestCaseEntry]()
-tests += swift_eventTests.allTests()
+tests += ObservableTests.allTests()
 XCTMain(tests)

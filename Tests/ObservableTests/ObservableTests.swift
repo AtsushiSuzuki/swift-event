@@ -1,5 +1,5 @@
 import XCTest
-@testable import swift_event
+@testable import Observable
 
 class ObservableTests: XCTestCase {
     func testObservable() {

@@ -1,4 +1,4 @@
-# swift-event (仮称)
+# swift-observable
 
 ## Usage:
 
