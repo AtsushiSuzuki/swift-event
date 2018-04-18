@@ -43,7 +43,7 @@ class ObservableTests: XCTestCase {
     func testProperty() {
         var sum = 0
 
-        let prop = Property<Int>(1)
+        let prop = ObservableValue<Int>(1)
         XCTAssertEqual(1, prop.value)
 
         prop.subscribe { sum += $0 }
